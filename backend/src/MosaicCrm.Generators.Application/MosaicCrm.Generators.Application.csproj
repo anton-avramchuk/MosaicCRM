@@ -31,7 +31,7 @@
         <Compile Include="..\MosaicCRM.Core\Modularity\Abstractions\IDependedTypesProvider.cs" Link="Common\IDependedTypesProvider.cs" />
         <Compile Include="..\MosaicCRM.Core\Modularity\ServiceConfigurationContext.cs" Link="Common\ServiceConfigurationContext.cs" />
         <Compile Include="..\MosaicCRM.Core\Modularity\DependsOnAttribute.cs" Link="Common\DependsOnAttribute.cs" />
-        <Compile Include="..\MosaicCRM.Generators.Core\Constants.cs" Link="Constants.cs" />
-        <Compile Include="..\MosaicCRM.Generators.Core\IsExternalInit.cs" Link="IsExternalInit.cs" />
+        <Compile Include="..\MosaicCrm.Generators.Core\Constants.cs" Link="Constants.cs" />
+        <Compile Include="..\MosaicCrm.Generators.Core\IsExternalInit.cs" Link="IsExternalInit.cs" />
     </ItemGroup>
 </Project>
