@@ -1,4 +1,3 @@
-using MosaicCRM.Core.Extensions.Collections;
 using Microsoft.Extensions.DependencyInjection;
 using MosaicCRM.Core.Extensions.Collections;
 

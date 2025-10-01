@@ -1,6 +1,5 @@
 using System.Reflection;
 using MosaicCRM.Core.Extensions.Collections;
-using MosaicCRM.Core.Extensions.Collections;
 
 namespace MosaicCRM.Core.Reflection;
 

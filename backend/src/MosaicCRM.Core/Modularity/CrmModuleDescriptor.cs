@@ -2,7 +2,6 @@ using System.Collections.Immutable;
 using System.Reflection;
 using MosaicCRM.Core.Extensions.Collections;
 using MosaicCRM.Core.Modularity.Abstractions;
-using MosaicCRM.Core.Extensions.Collections;
 
 namespace MosaicCRM.Core.Modularity;
 

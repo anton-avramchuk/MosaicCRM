@@ -1,8 +1,7 @@
 using System.Reflection;
-using MosaicCRM.Core.Extensions.Collections;
-using MosaicCRM.Core.Modularity.Abstractions;
 using Microsoft.Extensions.Logging;
 using MosaicCRM.Core.Extensions.Collections;
+using MosaicCRM.Core.Modularity.Abstractions;
 
 namespace MosaicCRM.Core.Modularity;
 
