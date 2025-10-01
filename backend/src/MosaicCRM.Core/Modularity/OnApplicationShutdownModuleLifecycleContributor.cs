@@ -1,8 +1,9 @@
 using MosaicCRM.Core.Modularity.Abstractions;
 using MosaicCRM.Core;
+using MosaicCRM.Core.DependencyInjection;
 
 namespace MosaicCRM.Core.Modularity;
-
+[Export(LifetimeType.Transient)]
 public class OnApplicationShutdownModuleLifecycleContributor : ModuleLifecycleContributorBase
 {
     public override async Task ShutdownAsync(ApplicationShutdownContext context, ICrmModule module)

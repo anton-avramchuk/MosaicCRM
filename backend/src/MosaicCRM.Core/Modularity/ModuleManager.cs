@@ -1,13 +1,13 @@
-using MosaicCRM.Core.Modularity.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Microsoft.Extensions.DependencyInjection;
-using MosaicCRM.Core;
 using MosaicCRM.Core.DependencyInjection;
+using MosaicCRM.Core.Modularity.Abstractions;
 
 namespace MosaicCRM.Core.Modularity;
 
-public class ModuleManager : IModuleManager, ISingletonDependency
+[Export(LifetimeType.Singleton, typeof(IModuleManager))]
+public class ModuleManager : IModuleManager
 {
     private readonly IModuleContainer _moduleContainer;
     private readonly IEnumerable<IModuleLifecycleContributor> _lifecycleContributors;

@@ -3,9 +3,9 @@ using MosaicCRM.Core.DependencyInjection;
 
 namespace MosaicCRM.Core.SimpleStateChecking;
 
+[Export(LifetimeType.Singleton, typeof(ISimpleStateCheckerSerializer))]
 public class SimpleStateCheckerSerializer :
-    ISimpleStateCheckerSerializer,
-    ISingletonDependency
+    ISimpleStateCheckerSerializer
 {
     private readonly IEnumerable<ISimpleStateCheckerSerializerContributor> _contributors;
 

@@ -1,9 +1,8 @@
 using System.Reflection;
+using Microsoft.Extensions.DependencyInjection;
 using MosaicCRM.Core.Extensions.Common;
 using MosaicCRM.Core.Extensions.DependencyInjection;
 using MosaicCRM.Core.Reflection;
-using Microsoft.Extensions.DependencyInjection;
-using DependencyAttribute = MosaicCRM.Core.DependencyInjection.DependencyAttribute;
 
 namespace MosaicCRM.Core.DependencyInjection;
 
@@ -14,10 +13,7 @@ public abstract class ConventionalRegistrarBase : IConventionalRegistrar
         var types = AssemblyHelper
             .GetAllTypes(assembly)
             .Where(
-                type => type != null &&
-                        type.IsClass &&
-                        !type.IsAbstract &&
-                        !type.IsGenericType
+                type => type is { IsClass: true, IsAbstract: false, IsGenericType: false }
             ).ToArray();
 
         AddTypes(services, types);
@@ -63,22 +59,22 @@ public abstract class ConventionalRegistrarBase : IConventionalRegistrar
 
     protected virtual ServiceLifetime? GetServiceLifetimeFromClassHierarchy(Type type)
     {
-        if (typeof(ITransientDependency).GetTypeInfo().IsAssignableFrom(type))
-        {
-            return ServiceLifetime.Transient;
-        }
+        var exportAttribute = type.GetCustomAttribute<ExportAttribute>();
 
-        if (typeof(ISingletonDependency).GetTypeInfo().IsAssignableFrom(type))
-        {
-            return ServiceLifetime.Singleton;
-        }
+        if (exportAttribute == null)
+            return null;
 
-        if (typeof(IScopedDependency).GetTypeInfo().IsAssignableFrom(type))
+        switch (exportAttribute.Lifetime)
         {
-            return ServiceLifetime.Scoped;
+            case LifetimeType.Transient:
+                return ServiceLifetime.Transient;
+            case LifetimeType.Singleton:
+                return ServiceLifetime.Singleton;
+            case LifetimeType.Scoped:
+                return ServiceLifetime.Scoped;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
-
-        return null;
     }
 
     protected virtual ServiceLifetime? GetDefaultLifeTimeOrNull(Type type)
@@ -86,10 +82,6 @@ public abstract class ConventionalRegistrarBase : IConventionalRegistrar
         return null;
     }
 
-    protected virtual List<Type> GetExposedServiceTypes(Type type)
-    {
-        return ExposedServiceExplorer.GetExposedServices(type);
-    }
 
     protected virtual ServiceDescriptor CreateServiceDescriptor(
         Type implementationType,

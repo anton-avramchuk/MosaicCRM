@@ -20,7 +20,9 @@ public class DefaultConventionalRegistrar : ConventionalRegistrarBase
             return;
         }
 
-        var exposedServiceTypes = GetExposedServiceTypes(type);
+        var exposedServiceTypes = new List<Type>();
+        
+        //todo: remove exposedServiceTypes
 
         TriggerServiceExposing(services, type, exposedServiceTypes);
 

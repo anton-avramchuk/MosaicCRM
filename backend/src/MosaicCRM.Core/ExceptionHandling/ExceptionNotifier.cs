@@ -6,7 +6,8 @@ using MosaicCRM.Core.DependencyInjection;
 
 namespace MosaicCRM.Core.ExceptionHandling;
 
-public class ExceptionNotifier : IExceptionNotifier, ITransientDependency
+[Export(LifetimeType.Transient, typeof(IExceptionNotifier))]
+public class ExceptionNotifier : IExceptionNotifier
 {
     public ILogger<ExceptionNotifier> Logger { get; set; }
 

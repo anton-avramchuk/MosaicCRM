@@ -1,10 +1,9 @@
 namespace MosaicCRM.Core.DependencyInjection;
 
-[ExposeServices(typeof(ITransientCachedServiceProvider))]
+[Export(LifetimeType.Transient, typeof(ITransientCachedServiceProvider))]
 public class TransientCachedServiceProvider :
     CachedServiceProviderBase,
-    ITransientCachedServiceProvider,
-    ITransientDependency
+    ITransientCachedServiceProvider
 {
     public TransientCachedServiceProvider(IServiceProvider serviceProvider)
         : base(serviceProvider)

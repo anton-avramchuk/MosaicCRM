@@ -1,8 +1,10 @@
 using MosaicCRM.Core.Modularity.Abstractions;
 using MosaicCRM.Core;
+using MosaicCRM.Core.DependencyInjection;
 
 namespace MosaicCRM.Core.Modularity;
 
+[Export(LifetimeType.Transient)]
 public class OnPreApplicationInitializationModuleLifecycleContributor : ModuleLifecycleContributorBase
 {
     public override async Task InitializeAsync(ApplicationInitializationContext context, ICrmModule module)

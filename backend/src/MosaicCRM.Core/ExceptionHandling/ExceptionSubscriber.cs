@@ -2,8 +2,8 @@ using MosaicCRM.Core.DependencyInjection;
 
 namespace MosaicCRM.Core.ExceptionHandling;
 
-[ExposeServices(typeof(IExceptionSubscriber))]
-public abstract class ExceptionSubscriber : IExceptionSubscriber, ITransientDependency
+[Export(LifetimeType.Transient, typeof(IExceptionSubscriber))]
+public abstract class ExceptionSubscriber : IExceptionSubscriber
 {
     public abstract Task HandleAsync(ExceptionNotificationContext context);
 }

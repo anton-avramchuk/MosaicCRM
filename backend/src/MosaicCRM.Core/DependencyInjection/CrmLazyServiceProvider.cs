@@ -6,11 +6,10 @@ namespace MosaicCRM.Core.DependencyInjection;
 /// This class is equivalent of the <see cref="TransientCachedServiceProvider"/>.
 /// Use <see cref="TransientCachedServiceProvider"/> instead of this class, for new projects. 
 /// </summary>
-[ExposeServices(typeof(ICrmLazyServiceProvider))]
+[Export(LifetimeType.Transient, typeof(ICrmLazyServiceProvider))]
 public class CrmLazyServiceProvider :
     CachedServiceProviderBase,
-    ICrmLazyServiceProvider,
-    ITransientDependency
+    ICrmLazyServiceProvider
 {
     public CrmLazyServiceProvider(IServiceProvider serviceProvider)
         : base(serviceProvider)
