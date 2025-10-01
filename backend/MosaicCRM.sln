@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.Core", "src\MosaicCRM.Core\MosaicCRM.Core.csproj", "{536358E3-1708-4EEA-AC26-5B5BC9C2A5B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCrm.Generators.Core", "src\MosaicCrm.Generators.Core\MosaicCrm.Generators.Core.csproj", "{DD2FF0E7-D169-46F7-AA44-CD738817788B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{536358E3-1708-4EEA-AC26-5B5BC9C2A5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{536358E3-1708-4EEA-AC26-5B5BC9C2A5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{536358E3-1708-4EEA-AC26-5B5BC9C2A5B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD2FF0E7-D169-46F7-AA44-CD738817788B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD2FF0E7-D169-46F7-AA44-CD738817788B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD2FF0E7-D169-46F7-AA44-CD738817788B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD2FF0E7-D169-46F7-AA44-CD738817788B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

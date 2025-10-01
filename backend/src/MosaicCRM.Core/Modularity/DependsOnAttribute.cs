@@ -1,3 +1,4 @@
+using System;
 using MosaicCRM.Core.Modularity.Abstractions;
 
 namespace MosaicCRM.Core.Modularity;

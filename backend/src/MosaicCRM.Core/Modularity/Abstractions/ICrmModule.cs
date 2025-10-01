@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+
 namespace MosaicCRM.Core.Modularity.Abstractions;
 
 public interface ICrmModule
