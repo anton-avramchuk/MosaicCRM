@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCrm.Generators.Core",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCrm.Generators.Application", "src\MosaicCrm.Generators.Application\MosaicCrm.Generators.Application.csproj", "{0553BD7E-7396-424C-9655-4A889B28451D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.Generators.Module", "src\MosaicCRM.Generators.Module\MosaicCRM.Generators.Module.csproj", "{8024BAB6-7A8E-4442-BACA-6ADEBB10F1A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{0553BD7E-7396-424C-9655-4A889B28451D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0553BD7E-7396-424C-9655-4A889B28451D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0553BD7E-7396-424C-9655-4A889B28451D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8024BAB6-7A8E-4442-BACA-6ADEBB10F1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8024BAB6-7A8E-4442-BACA-6ADEBB10F1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8024BAB6-7A8E-4442-BACA-6ADEBB10F1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8024BAB6-7A8E-4442-BACA-6ADEBB10F1A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
