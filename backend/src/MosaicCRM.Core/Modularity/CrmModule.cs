@@ -25,7 +25,7 @@ public abstract class CrmModule :
         {
             if (_serviceConfigurationContext == null)
             {
-                throw new MosaicCrmException($"{nameof(ServiceConfigurationContext)} is only available in the {nameof(ConfigureServices)}, {nameof(PreConfigureServices)} and {nameof(PostConfigureServices)} methods.");
+                throw new CrmException($"{nameof(ServiceConfigurationContext)} is only available in the {nameof(ConfigureServices)}, {nameof(PreConfigureServices)} and {nameof(PostConfigureServices)} methods.");
             }
 
             return _serviceConfigurationContext;

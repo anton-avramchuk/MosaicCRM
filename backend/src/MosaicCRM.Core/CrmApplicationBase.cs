@@ -171,7 +171,7 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
             catch (Exception ex)
             {
-                throw new MosaicCrmExceptionInitialization($"An error occurred during {nameof(IPreConfigureServices.PreConfigureServicesAsync)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
+                throw new CrmExceptionInitialization($"An error occurred during {nameof(IPreConfigureServices.PreConfigureServicesAsync)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
             }
         }
 
@@ -201,7 +201,7 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
             catch (Exception ex)
             {
-                throw new MosaicCrmExceptionInitialization($"An error occurred during {nameof(ICrmModule.ConfigureServicesAsync)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
+                throw new CrmExceptionInitialization($"An error occurred during {nameof(ICrmModule.ConfigureServicesAsync)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
             }
         }
 
@@ -214,7 +214,7 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
             catch (Exception ex)
             {
-                throw new MosaicCrmExceptionInitialization($"An error occurred during {nameof(IPostConfigureServices.PostConfigureServicesAsync)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
+                throw new CrmExceptionInitialization($"An error occurred during {nameof(IPostConfigureServices.PostConfigureServicesAsync)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
             }
         }
 
@@ -235,7 +235,7 @@ public abstract class CrmApplicationBase : ICrmApplication
     {
         if (_configuredServices)
         {
-            throw new MosaicCrmExceptionInitialization("Services have already been configured! If you call ConfigureServicesAsync method, you must have set CrmApplicationCreationOptions.SkipConfigureServices to true before.");
+            throw new CrmExceptionInitialization("Services have already been configured! If you call ConfigureServicesAsync method, you must have set CrmApplicationCreationOptions.SkipConfigureServices to true before.");
         }
     }
 
@@ -264,7 +264,7 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
             catch (Exception ex)
             {
-                throw new MosaicCrmExceptionInitialization($"An error occurred during {nameof(IPreConfigureServices.PreConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
+                throw new CrmExceptionInitialization($"An error occurred during {nameof(IPreConfigureServices.PreConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
             }
         }
 
@@ -294,7 +294,7 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
             catch (Exception ex)
             {
-                throw new MosaicCrmExceptionInitialization($"An error occurred during {nameof(ICrmModule.ConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
+                throw new CrmExceptionInitialization($"An error occurred during {nameof(ICrmModule.ConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
             }
         }
 
@@ -307,7 +307,7 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
             catch (Exception ex)
             {
-                throw new MosaicCrmExceptionInitialization($"An error occurred during {nameof(IPostConfigureServices.PostConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
+                throw new CrmExceptionInitialization($"An error occurred during {nameof(IPostConfigureServices.PostConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
             }
         }
 

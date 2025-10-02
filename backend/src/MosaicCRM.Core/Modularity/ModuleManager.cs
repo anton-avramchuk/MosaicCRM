@@ -41,7 +41,7 @@ public class ModuleManager : IModuleManager
                 }
                 catch (Exception ex)
                 {
-                    throw new MosaicCrmExceptionInitialization($"An error occurred during the initialize {contributor.GetType().FullName} phase of the module {module.Type.AssemblyQualifiedName}: {ex.Message}. See the inner exception for details.", ex);
+                    throw new CrmExceptionInitialization($"An error occurred during the initialize {contributor.GetType().FullName} phase of the module {module.Type.AssemblyQualifiedName}: {ex.Message}. See the inner exception for details.", ex);
                 }
             }
         }
@@ -61,7 +61,7 @@ public class ModuleManager : IModuleManager
                 }
                 catch (Exception ex)
                 {
-                    throw new MosaicCrmExceptionInitialization($"An error occurred during the initialize {contributor.GetType().FullName} phase of the module {module.Type.AssemblyQualifiedName}: {ex.Message}. See the inner exception for details.", ex);
+                    throw new CrmExceptionInitialization($"An error occurred during the initialize {contributor.GetType().FullName} phase of the module {module.Type.AssemblyQualifiedName}: {ex.Message}. See the inner exception for details.", ex);
                 }
             }
         }

@@ -17,7 +17,7 @@ public static class ServiceCollectionConfigurationExtensions
     public static IConfiguration GetConfiguration(this IServiceCollection services)
     {
         return services.GetConfigurationOrNull() ??
-               throw new MosaicCrmException("Could not find an implementation of " + typeof(IConfiguration).AssemblyQualifiedName + " in the service collection.");
+               throw new CrmException("Could not find an implementation of " + typeof(IConfiguration).AssemblyQualifiedName + " in the service collection.");
     }
 
     

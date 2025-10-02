@@ -74,7 +74,7 @@ public static class ServiceCollectionCommonExtensions
         var serviceProviderFactory = services.GetSingletonInstanceOrNull<IServiceProviderFactory<TContainerBuilder>>();
         if (serviceProviderFactory == null)
         {
-            throw new MosaicCrmException($"Could not find {typeof(IServiceProviderFactory<TContainerBuilder>).FullName} in {services}.");
+            throw new CrmException($"Could not find {typeof(IServiceProviderFactory<TContainerBuilder>).FullName} in {services}.");
         }
 
         var builder = serviceProviderFactory.CreateBuilder(services);

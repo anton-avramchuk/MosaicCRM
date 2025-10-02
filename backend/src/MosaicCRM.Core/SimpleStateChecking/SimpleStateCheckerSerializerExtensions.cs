@@ -61,7 +61,7 @@ public static class SimpleStateCheckerSerializerExtensions
             var jsonObject = array[0] as JsonObject;
             if (jsonObject == null)
             {
-                throw new MosaicCrmException("JSON value is not an array of objects: " + value);
+                throw new CrmException("JSON value is not an array of objects: " + value);
             }
 
             var checker = serializer.Deserialize(jsonObject, state);
@@ -79,7 +79,7 @@ public static class SimpleStateCheckerSerializerExtensions
         {
             if (array[i] is not JsonObject jsonObject)
             {
-                throw new MosaicCrmException("JSON value is not an array of objects: " + value);
+                throw new CrmException("JSON value is not an array of objects: " + value);
             }
 
             checkers.Add(serializer.Deserialize(jsonObject, state));

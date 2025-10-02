@@ -26,7 +26,7 @@ internal class CrmApplicationWithExternalServiceProvider : CrmApplicationBase, I
         {
             if (ServiceProvider != serviceProvider)
             {
-                throw new MosaicCrmException("Service provider was already set before to another service provider instance.");
+                throw new CrmException("Service provider was already set before to another service provider instance.");
             }
 
             return;
