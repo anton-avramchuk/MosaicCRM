@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.2"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.2"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <ProjectReference Include="..\MosaicCRM.Core.DataAccess\MosaicCRM.Core.DataAccess.csproj"/>
+        <ProjectReference Include="..\MosaicCRM.Domain\MosaicCRM.Domain.csproj"/>
+        <ProjectReference Include="..\MosaicCRM.Generators.Module\MosaicCRM.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer"/>
+    </ItemGroup>
+
+</Project>

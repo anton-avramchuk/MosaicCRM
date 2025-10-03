@@ -1,0 +1,6 @@
+namespace MosaicCRM.EntityFramework.DependencyInjection;
+
+public interface IApplicationDbContextRegistrationOptionsBuilder : IApplicationCommonDbContextRegistrationOptionsBuilder
+{
+
+}
