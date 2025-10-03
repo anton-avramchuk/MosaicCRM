@@ -273,7 +273,7 @@ public class BootstrapperGenerator : IIncrementalGenerator
         // Проверяем наличие атрибута BootstrapperAttribute
         foreach (var attribute in classSymbol.GetAttributes())
         {
-            if (attribute.AttributeClass?.ToDisplayString() == Constants.BoostrapperAttributeName)
+            if (attribute.AttributeClass?.ToDisplayString() == Constants.BootstrapperAttributeName)
             {
                 return classSymbol;
             }
@@ -284,11 +284,11 @@ public class BootstrapperGenerator : IIncrementalGenerator
 
     private static void GenerateBootstrapCode(SourceProductionContext context, INamedTypeSymbol classSymbol)
     {
-        // Создаём код для файла Boostraper.g.cs
+        // Создаём код для файла Bootstraper.g.cs
         var code = $@"
                 using System.Collections.Generic;
                 using Microsoft.Extensions.DependencyInjection;
-                using Dotnet.Modular.Core.Extensions.DependencyInjection;
+                using MosaicCRM.Core.Extensions.DependencyInjection;
 
                 namespace {classSymbol.ContainingAssembly.Name}
                 {{
@@ -303,7 +303,7 @@ public class BootstrapperGenerator : IIncrementalGenerator
                 }}";
 
         // Добавляем сгенерированный код
-        context.AddSource("Boostrapper.g.cs", SourceText.From(code, Encoding.UTF8));
+        context.AddSource("Bootstrapper.g.cs", SourceText.From(code, Encoding.UTF8));
     }
 
 
@@ -321,13 +321,13 @@ public class BootstrapperGenerator : IIncrementalGenerator
         code.AppendLine("        public static void InitializeModules()");
         code.AppendLine("        {");
 
-        code.AppendLine(
-            $"            Dotnet.Modular.Core.ModuleInitializer.AddModule<Dotnet.Modular.Modules.Core.CoreModule>();");
+        // code.AppendLine(
+        //     $"            Dotnet.Modular.Core.ModuleInitializer.AddModule<Dotnet.Modular.Modules.Core.CoreModule>();");
 
         foreach (var module in sortedModules)
         {
             code.AppendLine(
-                $"            Dotnet.Modular.Core.ModuleInitializer.AddModule<{module.ToDisplayString()}>();");
+                $"            MosaicCRM.Core.Modularity.ModuleInitializer.AddModule<{module.ToDisplayString()}>();");
         }
 
         code.AppendLine("        }");

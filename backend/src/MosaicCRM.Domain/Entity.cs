@@ -26,9 +26,9 @@ public abstract class Entity<T> : BaseEntity, IEntity<T> where T : struct
         return this.Id.Equals(default(T));
     }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
-        if (obj == null || !(obj is Entity<T>))
+        if (obj == null || obj is not Entity<T>)
             return false;
 
         if (Object.ReferenceEquals(this, obj))

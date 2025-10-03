@@ -7,7 +7,7 @@ namespace MosaicCrm.Generators.Core
 {
     public static class Constants
     {
-        public static string? BoostrapperAttributeName = typeof(BootstrapperAttribute).FullName;
+        public static string? BootstrapperAttributeName = typeof(BootstrapperAttribute).FullName;
 
         public static string? ModuleTypeName = typeof(ICrmModule).FullName;
 

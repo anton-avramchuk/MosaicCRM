@@ -1,6 +1,5 @@
-using MosaicCRM.Core.Modularity.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
-using MosaicCRM.Core;
+using MosaicCRM.Core.Modularity.Abstractions;
 
 namespace MosaicCRM.Core.Extensions.DependencyInjection;
 
