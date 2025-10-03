@@ -11,7 +11,7 @@ public static class EfCoreServiceCollectionExtensions
 {
     public static IServiceCollection AddApplicationDbContext<TDbContext>(
         this IServiceCollection services,
-        Action<IApplicationDbContextRegistrationOptionsBuilder> optionsBuilder = null)
+        Action<IApplicationDbContextRegistrationOptionsBuilder>? optionsBuilder = null)
         where TDbContext : DbContext, ICrmDbContext
     {
 
