@@ -1,8 +1,7 @@
-using MosaicCRM.Core.DataAccess;
-using MosaicCRM.Core.DataAccess.Abstractions;
-using MosaicCRM.Core.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using MosaicCRM.Core.DataAccess;
+using MosaicCRM.Core.DataAccess.Abstractions;
 using MosaicCRM.Core.DependencyInjection;
 
 namespace MosaicCRM.EntityFramework.Providers;

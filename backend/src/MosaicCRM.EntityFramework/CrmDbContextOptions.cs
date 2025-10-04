@@ -17,7 +17,7 @@ public class CrmDbContextOptions
         ConfigureActions[typeof(TDbContext)] = action;
     }
 
-    internal Action<CrmDbContextConfigurationContext> DefaultConfigureAction { get; set; }
+    internal Action<CrmDbContextConfigurationContext>? DefaultConfigureAction { get; set; }
 
     internal Dictionary<Type, object> ConfigureActions { get; } = new();
 

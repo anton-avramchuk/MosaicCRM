@@ -3,22 +3,16 @@ using MosaicCRM.Core;
 
 namespace MosaicCRM.EntityFramework;
 
-public class DbContextCreationContext
+public class DbContextCreationContext(string connectionStringName, string connectionString)
 {
-    public static DbContextCreationContext Current => _current.Value;
-    private static readonly AsyncLocal<DbContextCreationContext> _current = new();
+    public static DbContextCreationContext? Current => _current.Value;
+    private static readonly AsyncLocal<DbContextCreationContext?> _current = new();
 
-    public string ConnectionStringName { get; }
+    public string ConnectionStringName { get; } = connectionStringName;
 
-    public string ConnectionString { get; }
+    public string ConnectionString { get; } = connectionString;
 
     public DbConnection? ExistingConnection { get; internal set; }
-
-    public DbContextCreationContext(string connectionStringName, string connectionString)
-    {
-        ConnectionStringName = connectionStringName;
-        ConnectionString = connectionString;
-    }
 
     public static IDisposable Use(DbContextCreationContext context)
     {

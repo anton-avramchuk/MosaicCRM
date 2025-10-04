@@ -19,7 +19,7 @@ public static class DbContextOptionsFactory
             creationContext.ConnectionString,
             serviceProvider,
             creationContext.ConnectionStringName,
-            creationContext.ExistingConnection
+            creationContext.ExistingConnection!
         );
 
         var options = GetDbContextOptions<TDbContext>(serviceProvider);
