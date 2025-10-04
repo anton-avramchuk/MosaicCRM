@@ -1,0 +1,46 @@
+using Microsoft.Extensions.Options;
+using MosaicCRM.Core;
+using MosaicCRM.Core.DependencyInjection;
+
+namespace MosaicCRM.AspNetCore.Extensions;
+
+public static class ApplicationInitializationContextExtensions
+{
+    public static IApplicationBuilder GetApplicationBuilder(this ApplicationInitializationContext context)
+    {
+        return context.ServiceProvider.GetRequiredService<IObjectAccessor<IApplicationBuilder>>().Value!;
+    }
+
+
+    public static IEndpointRouteBuilder GetRouteBuilder(this ApplicationInitializationContext context)
+    {
+        return context.ServiceProvider.GetRequiredService<IObjectAccessor<IEndpointRouteBuilder>>().Value!;
+    }
+
+
+    public static IWebHostEnvironment GetEnvironment(this ApplicationInitializationContext context)
+    {
+        return context.ServiceProvider.GetRequiredService<IWebHostEnvironment>();
+    }
+
+    public static IWebHostEnvironment GetEnvironmentOrNull(this ApplicationInitializationContext context)
+    {
+        return context.ServiceProvider.GetService<IWebHostEnvironment>()!;
+    }
+
+    public static IConfiguration GetConfiguration(this ApplicationInitializationContext context)
+    {
+        return context.ServiceProvider.GetRequiredService<IConfiguration>();
+    }
+
+    public static ILoggerFactory GetLoggerFactory(this ApplicationInitializationContext context)
+    {
+        return context.ServiceProvider.GetRequiredService<ILoggerFactory>();
+    }
+    
+    public static TOptions GetOptions<TOptions>(this ApplicationInitializationContext context)
+        where TOptions : class
+    {
+        return context.ServiceProvider.GetRequiredService<IOptions<TOptions>>().Value;
+    }
+}
