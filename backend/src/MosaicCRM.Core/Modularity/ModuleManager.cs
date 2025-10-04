@@ -2,38 +2,30 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MosaicCRM.Core.DependencyInjection;
+using MosaicCRM.Core.Modularity;
 using MosaicCRM.Core.Modularity.Abstractions;
 
-namespace MosaicCRM.Core.Modularity;
+namespace MosaicCRM.Core.Module.Services;
 
 [Export(LifetimeType.Singleton, typeof(IModuleManager))]
-public class ModuleManager : IModuleManager
+public class ModuleManager(
+    IModuleContainer moduleContainer,
+    ILogger<ModuleManager> logger,
+    IOptions<CrmModuleLifecycleOptions> options,
+    IServiceProvider serviceProvider)
+    : IModuleManager
 {
-    private readonly IModuleContainer _moduleContainer;
-    private readonly IEnumerable<IModuleLifecycleContributor> _lifecycleContributors;
-    private readonly ILogger<ModuleManager> _logger;
-
-    public ModuleManager(
-        IModuleContainer moduleContainer,
-        ILogger<ModuleManager> logger,
-        IOptions<CrmModuleLifecycleOptions> options,
-        IServiceProvider serviceProvider)
-    {
-        _moduleContainer = moduleContainer;
-        _logger = logger;
-
-        _lifecycleContributors = options.Value
-            .Contributors
-            .Select(serviceProvider.GetRequiredService)
-            .Cast<IModuleLifecycleContributor>()
-            .ToArray();
-    }
+    private readonly IEnumerable<IModuleLifecycleContributor> _lifecycleContributors = options.Value
+        .Contributors
+        .Select(serviceProvider.GetRequiredService)
+        .Cast<IModuleLifecycleContributor>()
+        .ToArray();
 
     public virtual async Task InitializeModulesAsync(ApplicationInitializationContext context)
     {
         foreach (var contributor in _lifecycleContributors)
         {
-            foreach (var module in _moduleContainer.Modules)
+            foreach (var module in moduleContainer.Modules)
             {
                 try
                 {
@@ -46,14 +38,14 @@ public class ModuleManager : IModuleManager
             }
         }
 
-        _logger.LogInformation("Initialized all CRM modules.");
+        logger.LogInformation("Initialized all CRM modules.");
     }
 
     public void InitializeModules(ApplicationInitializationContext context)
     {
         foreach (var contributor in _lifecycleContributors)
         {
-            foreach (var module in _moduleContainer.Modules)
+            foreach (var module in moduleContainer.Modules)
             {
                 try
                 {
@@ -66,12 +58,12 @@ public class ModuleManager : IModuleManager
             }
         }
 
-        _logger.LogInformation("Initialized all CRM modules.");
+        logger.LogInformation("Initialized all CRM modules.");
     }
 
     public virtual async Task ShutdownModulesAsync(ApplicationShutdownContext context)
     {
-        var modules = _moduleContainer.Modules.Reverse().ToList();
+        var modules = moduleContainer.Modules.Reverse().ToList();
 
         foreach (var contributor in _lifecycleContributors)
         {
@@ -91,7 +83,7 @@ public class ModuleManager : IModuleManager
 
     public void ShutdownModules(ApplicationShutdownContext context)
     {
-        var modules = _moduleContainer.Modules.Reverse().ToList();
+        var modules = moduleContainer.Modules.Reverse().ToList();
 
         foreach (var contributor in _lifecycleContributors)
         {

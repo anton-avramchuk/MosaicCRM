@@ -88,6 +88,9 @@ namespace {moduleSymbol.ContainingNamespace}
 
         foreach (var classSymbol in classesWithExport)
         {
+            if(classSymbol.IsAbstract)
+                continue;
+            
             foreach (var attribute in classSymbol.GetAttributes().Where(a => a.AttributeClass?.ToDisplayString() == Constants.ExportAttributeName))
             {
                 var exportType = (LifetimeType)attribute.ConstructorArguments[0].Value!;
@@ -164,6 +167,9 @@ namespace {moduleSymbol.ContainingNamespace}
 
         var classSymbol = semanticModel.GetDeclaredSymbol(classDeclaration);
         if (classSymbol is null)
+            return null;
+        
+        if (classSymbol.IsAbstract)
             return null;
 
         if (!classSymbol.AllInterfaces.Any(i => i.ToDisplayString() == Constants.ModuleTypeName))

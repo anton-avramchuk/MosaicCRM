@@ -4,12 +4,12 @@ namespace MosaicCRM.Core.Modularity
 {
     public static class ModuleInitializer
     {
-        private static readonly List<Type> _modules = [];
+        private static readonly List<Type> modules = [];
         public static void AddModule<TModule>() where TModule : ICrmModule
         {
-            _modules.Add(typeof(TModule));
+            modules.Add(typeof(TModule));
         }
 
-        internal static IEnumerable<Type> Modules => _modules.AsEnumerable();
+        internal static IEnumerable<Type> Modules => modules.AsEnumerable();
     }
 }

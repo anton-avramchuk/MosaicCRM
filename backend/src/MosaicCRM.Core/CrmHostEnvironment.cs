@@ -1,5 +1,3 @@
-using MosaicCRM.Core;
-
 namespace MosaicCRM.Core;
 
 public class CrmHostEnvironment : ICrmHostEnvironment

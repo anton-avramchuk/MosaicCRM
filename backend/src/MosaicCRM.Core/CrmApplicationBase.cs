@@ -175,26 +175,11 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
         }
 
-        var assemblies = new HashSet<Assembly>();
 
         //ConfigureServices
         foreach (var module in Modules)
         {
-            if (module.Instance is CrmModule crmModule)
-            {
-                if (!crmModule.SkipAutoServiceRegistration)
-                {
-                    foreach (var assembly in module.AllAssemblies)
-                    {
-                        if (!assemblies.Contains(assembly))
-                        {
-                            Services.AddAssembly(assembly);
-                            assemblies.Add(assembly);
-                        }
-                    }
-                }
-            }
-
+            
             try
             {
                 await module.Instance.ConfigureServicesAsync(context);
@@ -268,26 +253,11 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
         }
 
-        var assemblies = new HashSet<Assembly>();
 
         //ConfigureServices
         foreach (var module in Modules)
         {
-            if (module.Instance is CrmModule crmModule)
-            {
-                if (!crmModule.SkipAutoServiceRegistration)
-                {
-                    foreach (var assembly in module.AllAssemblies)
-                    {
-                        if (!assemblies.Contains(assembly))
-                        {
-                            Services.AddAssembly(assembly);
-                            assemblies.Add(assembly);
-                        }
-                    }
-                }
-            }
-
+            
             try
             {
                 module.Instance.ConfigureServices(context);

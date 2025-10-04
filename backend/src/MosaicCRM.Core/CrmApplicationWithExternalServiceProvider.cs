@@ -1,4 +1,3 @@
-using MosaicCRM.Core;
 using Microsoft.Extensions.DependencyInjection;
 using MosaicCRM.Core.Exceptions;
 

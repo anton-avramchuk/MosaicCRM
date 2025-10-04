@@ -1,5 +1,6 @@
 using MosaicCRM.Core.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace MosaicCRM.Core;
 
@@ -20,7 +21,8 @@ public class CrmApplicationCreationOptions
 
     public string? ApplicationName { get; set; }
 
-    public string? Environment { get; set; }
+    //todo: from config
+    public string? Environment { get; set; } = Environments.Development;
 
     public CrmApplicationCreationOptions(IServiceCollection services)
     {
