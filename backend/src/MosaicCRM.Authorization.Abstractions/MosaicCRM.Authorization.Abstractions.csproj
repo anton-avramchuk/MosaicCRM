@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="$(MicrosoftPackageVersion)"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\MosaicCRM.Core\MosaicCRM.Core.csproj"/>
+        <ProjectReference Include="..\MosaicCRM.Security\MosaicCRM.Security.csproj"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\MosaicCRM.Generators.Module\MosaicCRM.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer"/>
+    </ItemGroup>
+</Project>

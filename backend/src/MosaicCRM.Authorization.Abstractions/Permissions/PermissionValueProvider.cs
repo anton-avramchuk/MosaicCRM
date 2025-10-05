@@ -1,0 +1,21 @@
+using HornsAndHoovesCrm.Authorization.Abstractions.Permissions;
+using MosaicCRM.Core.DependencyInjection;
+
+namespace MosaicCRM.Authorization.Abstractions.Permissions;
+
+[Export(LifetimeType.Transient,typeof(IPermissionValueProvider))]
+public abstract class PermissionValueProvider : IPermissionValueProvider
+{
+    public abstract string Name { get; }
+
+    protected IPermissionStore PermissionStore { get; }
+
+    protected PermissionValueProvider(IPermissionStore permissionStore)
+    {
+        PermissionStore = permissionStore;
+    }
+
+    public abstract Task<PermissionGrantResult> CheckAsync(PermissionValueCheckContext context);
+
+    public abstract Task<MultiplePermissionGrantResult> CheckAsync(PermissionValuesCheckContext context);
+}
