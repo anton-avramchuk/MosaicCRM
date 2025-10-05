@@ -28,6 +28,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.ObjectMapping.Map
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.Specification", "src\MosaicCRM.Specification\MosaicCRM.Specification.csproj", "{A2299F0C-ACAD-4EB7-821E-D93E5D91C5D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.EntityFramework.MsSql", "src\MosaicCRM.EntityFramework.MsSql\MosaicCRM.EntityFramework.MsSql.csproj", "{F6E8F76F-7336-4B41-BA8E-D90CFD39CE60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.EntityFramework.SqLite", "src\MosaicCRM.EntityFramework.SqLite\MosaicCRM.EntityFramework.SqLite.csproj", "{EEB48E1C-A69F-45F9-81A3-F0AB43B852E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.EntityFramework.MySql", "src\MosaicCRM.EntityFramework.MySql\MosaicCRM.EntityFramework.MySql.csproj", "{C449BCB2-A027-416B-A519-9F9724C16269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.EntityFramework.PostgreSql", "src\MosaicCRM.EntityFramework.PostgreSql\MosaicCRM.EntityFramework.PostgreSql.csproj", "{EF0CFAF0-D7C4-4817-90FF-C9F292AA6D6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,5 +98,21 @@ Global
 		{A2299F0C-ACAD-4EB7-821E-D93E5D91C5D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2299F0C-ACAD-4EB7-821E-D93E5D91C5D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2299F0C-ACAD-4EB7-821E-D93E5D91C5D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E8F76F-7336-4B41-BA8E-D90CFD39CE60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E8F76F-7336-4B41-BA8E-D90CFD39CE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E8F76F-7336-4B41-BA8E-D90CFD39CE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E8F76F-7336-4B41-BA8E-D90CFD39CE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB48E1C-A69F-45F9-81A3-F0AB43B852E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB48E1C-A69F-45F9-81A3-F0AB43B852E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB48E1C-A69F-45F9-81A3-F0AB43B852E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB48E1C-A69F-45F9-81A3-F0AB43B852E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C449BCB2-A027-416B-A519-9F9724C16269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C449BCB2-A027-416B-A519-9F9724C16269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C449BCB2-A027-416B-A519-9F9724C16269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C449BCB2-A027-416B-A519-9F9724C16269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF0CFAF0-D7C4-4817-90FF-C9F292AA6D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0CFAF0-D7C4-4817-90FF-C9F292AA6D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0CFAF0-D7C4-4817-90FF-C9F292AA6D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0CFAF0-D7C4-4817-90FF-C9F292AA6D6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

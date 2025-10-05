@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\MosaicCRM.Core\MosaicCRM.Core.csproj"/>
+        <ProjectReference Include="..\MosaicCRM.EntityFramework\MosaicCRM.EntityFramework.csproj"/>
+        <ProjectReference Include="..\MosaicCRM.Generators.Module\MosaicCRM.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer"/>
+    </ItemGroup>
+</Project>
