@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.ObjectMapping", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.ObjectMapping.Mapster", "src\MosaicCRM.ObjectMapping.Mapster\MosaicCRM.ObjectMapping.Mapster.csproj", "{76E2E77E-56F8-4D9F-B40E-1F8DFD8963A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.Specification", "src\MosaicCRM.Specification\MosaicCRM.Specification.csproj", "{A2299F0C-ACAD-4EB7-821E-D93E5D91C5D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +86,9 @@ Global
 		{76E2E77E-56F8-4D9F-B40E-1F8DFD8963A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76E2E77E-56F8-4D9F-B40E-1F8DFD8963A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76E2E77E-56F8-4D9F-B40E-1F8DFD8963A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2299F0C-ACAD-4EB7-821E-D93E5D91C5D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2299F0C-ACAD-4EB7-821E-D93E5D91C5D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2299F0C-ACAD-4EB7-821E-D93E5D91C5D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2299F0C-ACAD-4EB7-821E-D93E5D91C5D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
