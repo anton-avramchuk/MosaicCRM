@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.EntityFramework.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.EntityFramework.PostgreSql", "src\MosaicCRM.EntityFramework.PostgreSql\MosaicCRM.EntityFramework.PostgreSql.csproj", "{EF0CFAF0-D7C4-4817-90FF-C9F292AA6D6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.AspNetCore.Jwt", "src\MosaicCRM.AspNetCore.Jwt\MosaicCRM.AspNetCore.Jwt.csproj", "{24E4D5B1-0EF1-4436-BD8B-DB992B444B35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,5 +116,9 @@ Global
 		{EF0CFAF0-D7C4-4817-90FF-C9F292AA6D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF0CFAF0-D7C4-4817-90FF-C9F292AA6D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF0CFAF0-D7C4-4817-90FF-C9F292AA6D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24E4D5B1-0EF1-4436-BD8B-DB992B444B35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E4D5B1-0EF1-4436-BD8B-DB992B444B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E4D5B1-0EF1-4436-BD8B-DB992B444B35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E4D5B1-0EF1-4436-BD8B-DB992B444B35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
