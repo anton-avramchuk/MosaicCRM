@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
+    </PropertyGroup>
+    
+    
+    <ItemGroup>
+      <ProjectReference Include="..\MosaicCRM.AspNetCore\MosaicCRM.AspNetCore.csproj" />
+      <ProjectReference Include="..\MosaicCRM.Core\MosaicCRM.Core.csproj" />
+    </ItemGroup>
+
+</Project>

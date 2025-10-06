@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MosaicCRM.AspNetCore.Jwt\MosaicCRM.AspNetCore.Jwt.csproj" />
+      <ProjectReference Include="..\MosaicCRM.Modules.Identity.Auth\MosaicCRM.Modules.Identity.Auth.csproj" />
+      <ProjectReference Include="..\MosaicCRM.Modules.Identity.Domain\MosaicCRM.Modules.Identity.Domain.csproj" />
+      <ProjectReference Include="..\MosaicCRM.Modules.Identity\MosaicCRM.Modules.Identity.csproj" />
+    </ItemGroup>
+
+</Project>
