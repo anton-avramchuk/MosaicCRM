@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace HornsAndHoovesCrm.Security.Claims;
+namespace MosaicCRM.Security.Claims;
 
 public class ApplicationClaimsPrincipalContributorContext
 {

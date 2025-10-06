@@ -1,5 +1,4 @@
 using System.Security.Claims;
-using HornsAndHoovesCrm.Security.Claims;
 using Microsoft.Extensions.DependencyInjection;
 using MosaicCRM.Core.DependencyInjection;
 using MosaicCRM.Security.Claims.Abstractions;

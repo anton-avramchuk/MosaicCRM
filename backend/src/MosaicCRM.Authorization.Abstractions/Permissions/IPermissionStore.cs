@@ -1,5 +1,3 @@
-using HornsAndHoovesCrm.Authorization.Abstractions.Permissions;
-
 namespace MosaicCRM.Authorization.Abstractions.Permissions;
 
 public interface IPermissionStore

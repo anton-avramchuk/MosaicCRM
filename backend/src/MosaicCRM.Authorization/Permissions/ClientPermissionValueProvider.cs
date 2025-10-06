@@ -1,4 +1,3 @@
-using HornsAndHoovesCrm.Authorization.Abstractions.Permissions;
 using MosaicCRM.Authorization.Abstractions.Permissions;
 using MosaicCRM.Security.Claims;
 

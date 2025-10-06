@@ -42,6 +42,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.Authorization.Abs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.Authorization", "src\MosaicCRM.Authorization\MosaicCRM.Authorization.csproj", "{1220EFB2-6A42-4153-8EE9-1902D59693F5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{5CAEF41E-0411-4E4F-87E1-2A59C7CE55C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{8726D718-2FDF-430B-BDF7-0D5A1CD27290}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.Modules.Identity.Domain", "src\MosaicCRM.Modules.Identity.Domain\MosaicCRM.Modules.Identity.Domain.csproj", "{35A65B6E-6E72-4580-A35A-3405CD2B2E24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -132,5 +138,13 @@ Global
 		{1220EFB2-6A42-4153-8EE9-1902D59693F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1220EFB2-6A42-4153-8EE9-1902D59693F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1220EFB2-6A42-4153-8EE9-1902D59693F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A65B6E-6E72-4580-A35A-3405CD2B2E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A65B6E-6E72-4580-A35A-3405CD2B2E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A65B6E-6E72-4580-A35A-3405CD2B2E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A65B6E-6E72-4580-A35A-3405CD2B2E24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8726D718-2FDF-430B-BDF7-0D5A1CD27290} = {5CAEF41E-0411-4E4F-87E1-2A59C7CE55C9}
+		{35A65B6E-6E72-4580-A35A-3405CD2B2E24} = {8726D718-2FDF-430B-BDF7-0D5A1CD27290}
 	EndGlobalSection
 EndGlobal

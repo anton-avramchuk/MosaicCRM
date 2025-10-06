@@ -1,4 +1,3 @@
-using HornsAndHoovesCrm.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using MosaicCRM.Authorization.Abstractions;
 using MosaicCRM.Core.Exceptions;

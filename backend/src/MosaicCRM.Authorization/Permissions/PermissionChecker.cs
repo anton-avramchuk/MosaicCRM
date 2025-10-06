@@ -1,5 +1,4 @@
 using System.Security.Claims;
-using HornsAndHoovesCrm.Authorization.Abstractions.Permissions;
 using MosaicCRM.Authorization.Abstractions.Permissions;
 using MosaicCRM.Core.DependencyInjection;
 using MosaicCRM.Core.Extensions.Collections;

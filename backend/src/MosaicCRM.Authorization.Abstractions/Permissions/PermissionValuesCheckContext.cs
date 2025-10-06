@@ -1,7 +1,6 @@
 using System.Security.Claims;
-using MosaicCRM.Authorization.Abstractions.Permissions;
 
-namespace HornsAndHoovesCrm.Authorization.Abstractions.Permissions;
+namespace MosaicCRM.Authorization.Abstractions.Permissions;
 
 public class PermissionValuesCheckContext
 {

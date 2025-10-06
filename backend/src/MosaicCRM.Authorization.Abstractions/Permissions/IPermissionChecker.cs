@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace HornsAndHoovesCrm.Authorization.Abstractions.Permissions;
+namespace MosaicCRM.Authorization.Abstractions.Permissions;
 
 public interface IPermissionChecker
 {

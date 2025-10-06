@@ -1,6 +1,5 @@
-using HornsAndHoovesCrm.Authorization.Abstractions;
-using HornsAndHoovesCrm.Authorization.Abstractions.Permissions;
 using Microsoft.AspNetCore.Authorization;
+using MosaicCRM.Authorization.Abstractions.Permissions;
 
 namespace MosaicCRM.Authorization.Abstractions;
 

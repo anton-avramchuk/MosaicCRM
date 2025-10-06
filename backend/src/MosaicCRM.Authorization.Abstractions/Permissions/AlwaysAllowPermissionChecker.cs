@@ -1,5 +1,4 @@
 using System.Security.Claims;
-using HornsAndHoovesCrm.Authorization.Abstractions.Permissions;
 
 namespace MosaicCRM.Authorization.Abstractions.Permissions;
 

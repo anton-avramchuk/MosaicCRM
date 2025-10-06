@@ -1,4 +1,3 @@
-using HornsAndHoovesCrm.Authorization.Abstractions.Permissions;
 using MosaicCRM.Core.DependencyInjection;
 
 namespace MosaicCRM.Authorization.Abstractions.Permissions;
