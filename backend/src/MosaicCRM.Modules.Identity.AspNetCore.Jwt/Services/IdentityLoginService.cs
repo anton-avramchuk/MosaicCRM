@@ -77,11 +77,10 @@ public class IdentityLoginService<TIdentityUser, TIdentityRole> : ILoginService<
 
     private async Task<List<Claim>> GetValidClaims(TIdentityUser user)
     {
-        IdentityOptions options = new IdentityOptions();
         var claims = new List<Claim>
         {
-            new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-            new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName)
+            new(JwtRegisteredClaimNames.Sub, user.UserName),
+            new(JwtRegisteredClaimNames.UniqueName, user.UserName)
         };
         var userClaims = await _userManager.GetClaimsAsync(user);
         var userRoles = await _userManager.GetRolesAsync(user);
