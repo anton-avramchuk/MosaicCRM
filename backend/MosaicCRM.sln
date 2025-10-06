@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.AspNetCore.Jwt", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.Authorization.Abstractions", "src\MosaicCRM.Authorization.Abstractions\MosaicCRM.Authorization.Abstractions.csproj", "{22E0783E-9B9D-4476-AF9A-3D255F7961F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MosaicCRM.Authorization", "src\MosaicCRM.Authorization\MosaicCRM.Authorization.csproj", "{1220EFB2-6A42-4153-8EE9-1902D59693F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,5 +128,9 @@ Global
 		{22E0783E-9B9D-4476-AF9A-3D255F7961F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22E0783E-9B9D-4476-AF9A-3D255F7961F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22E0783E-9B9D-4476-AF9A-3D255F7961F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1220EFB2-6A42-4153-8EE9-1902D59693F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1220EFB2-6A42-4153-8EE9-1902D59693F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1220EFB2-6A42-4153-8EE9-1902D59693F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1220EFB2-6A42-4153-8EE9-1902D59693F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
