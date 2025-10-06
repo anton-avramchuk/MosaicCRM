@@ -37,17 +37,17 @@ public class IdentityLoginService<TIdentityUser, TIdentityRole> : ILoginService<
         if (result.Succeeded)
         {
             var user = await _userManager.FindByNameAsync(loginModel.UserName);
-            var claims = await GetValidClaims(user);
-            var userRoles = await _userManager.GetRolesAsync(user);
+            var claims = await GetValidClaims(user!);
+            var userRoles = await _userManager.GetRolesAsync(user!);
 
             var rolesClaims = new List<Claim>();
             foreach (var roleName in userRoles)
             {
                 var role = await _roleManager.FindByNameAsync(roleName);
-                var roleClaims = await _roleManager.GetClaimsAsync(role);
+                var roleClaims = await _roleManager.GetClaimsAsync(role!);
                 foreach (var roleClaim in roleClaims)
                 {
-                    if (!rolesClaims.Any(x => x.Type == roleClaim.Type))
+                    if (rolesClaims.All(x => x.Type != roleClaim.Type))
                     {
                         rolesClaims.Add(roleClaim);
                     }
