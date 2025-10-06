@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="$(MicrosoftPackageVersion)" />
+        <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="$(MicrosoftPackageVersion)" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MosaicCRM.EntityFramework\MosaicCRM.EntityFramework.csproj" />
+      <ProjectReference Include="..\MosaicCRM.Modules.Identity.Domain.Shared\MosaicCRM.Modules.Identity.Domain.Shared.csproj" />
+      <ProjectReference Include="..\MosaicCRM.Modules.Identity.Domain\MosaicCRM.Modules.Identity.Domain.csproj" />
+      <ProjectReference Include="..\MosaicCRM.Security\MosaicCRM.Security.csproj" />
+    </ItemGroup>
+
+</Project>
