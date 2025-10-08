@@ -28,10 +28,10 @@ public class CrmIdentityUser<TIdentityRole> : Entity<Guid> where TIdentityRole :
     
     public virtual string DisplayUserName => UserName;
 
-    private readonly List<CrmIdentityUserRole<TIdentityRole>> _roles = new List<CrmIdentityUserRole<TIdentityRole>>();
+    private readonly List<CrmIdentityUserRole<TIdentityRole>> _roles = new();
     public IReadOnlyCollection<CrmIdentityUserRole<TIdentityRole>> Roles => _roles;
 
-    private readonly List<CrmIdentityUserClaim> _claims = new List<CrmIdentityUserClaim>();
+    private readonly List<CrmIdentityUserClaim> _claims = new();
 
     public IReadOnlyCollection<CrmIdentityUserClaim> Claims => _claims;
 

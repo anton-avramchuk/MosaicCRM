@@ -5,14 +5,14 @@ namespace MosaicCRM.Modules.Identity.Domain;
 
 public class CrmIdentityRole : Entity<Guid>, IAggregateRoot
 {
-    public virtual string Name { get; protected internal set; }
+    public string Name { get; protected internal set; }
 
-    public virtual string NormalizedName { get; protected internal set; }
+    public string NormalizedName { get; protected internal set; }
 
 
-    private readonly List<CrmIdentityRoleClaim> _claims = new List<CrmIdentityRoleClaim>();
+    private readonly List<CrmIdentityRoleClaim> _claims = new();
 
-    public virtual IReadOnlyCollection<CrmIdentityRoleClaim> Claims => _claims;
+    public IReadOnlyCollection<CrmIdentityRoleClaim> Claims => _claims;
 
     protected CrmIdentityRole()
     {

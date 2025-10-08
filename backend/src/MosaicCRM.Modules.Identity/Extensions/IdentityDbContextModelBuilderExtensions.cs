@@ -67,14 +67,12 @@ public static class IdentityDbContextModelBuilderExtensions
 
             b.HasIndex(uc => uc.UserId);
 
-            //b.ApplyObjectExtensionMappings();
         });
 
         builder.Entity<CrmIdentityUserRole<TIdentityRole>>(b =>
         {
             b.ToTable("UserRoles");
 
-            //b.ConfigureByConvention();
 
             b.HasKey(ur => new { ur.UserId, ur.RoleId });
 
@@ -83,7 +81,6 @@ public static class IdentityDbContextModelBuilderExtensions
 
             b.HasIndex(ur => new { ur.RoleId, ur.UserId });
 
-            //b.ApplyObjectExtensionMappings();
         });
 
 
