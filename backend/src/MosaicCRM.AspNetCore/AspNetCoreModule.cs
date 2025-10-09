@@ -1,4 +1,6 @@
-﻿using MosaicCRM.Core.Extensions.DependencyInjection;
+﻿using MosaicCRM.AspNetCore.Extensions;
+using MosaicCRM.Core;
+using MosaicCRM.Core.Extensions.DependencyInjection;
 using MosaicCRM.Core.Modularity;
 using MosaicCRM.Security;
 
@@ -13,5 +15,12 @@ public partial class AspNetCoreModule : CrmModule
         context.Services.AddHttpContextAccessor();
         context.Services.AddObjectAccessor<IApplicationBuilder>();
         context.Services.AddObjectAccessor<IEndpointRouteBuilder>();
+    }
+
+    public override void OnApplicationInitialization(ApplicationInitializationContext context)
+    {
+        var app = context.GetApplicationBuilder();
+        app.UseRouting();
+
     }
 }

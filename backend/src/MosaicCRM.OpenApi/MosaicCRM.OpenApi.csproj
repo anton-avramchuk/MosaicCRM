@@ -5,7 +5,7 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="$(MicrosoftPackageVersion)" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(MicrosoftPackageVersion)" />
         <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="$(MicrosoftPackageVersion)" />
-        <PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.27" />
+        <PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.28" />
     </ItemGroup>
     
     <ItemGroup>

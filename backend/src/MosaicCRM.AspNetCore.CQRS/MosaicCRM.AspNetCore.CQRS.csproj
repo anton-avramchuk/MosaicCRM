@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+      <ProjectReference Include="..\MosaicCRM.AspNetCore.Responses\MosaicCRM.AspNetCore.Responses.csproj" />
+      <ProjectReference Include="..\MosaicCRM.AspNetCore\MosaicCRM.AspNetCore.csproj" />
+      <ProjectReference Include="..\MosaicCRM.Core\MosaicCRM.Core.csproj" />
+    </ItemGroup>
+
+</Project>
